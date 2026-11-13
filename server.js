@@ -25,7 +25,7 @@ const start = async () => {
 
 if (require.main === module) {
   start().catch(error => {
-    console.error('Server startup failed:', error.message);
+    console.error('Server startup failed:', error);
     process.exitCode = 1;
   });
 }
