@@ -1,0 +1,204 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="theme-color" content="#111317")
+    link(rel="icon" type="image/png" sizes="430x430" href="/img/rangebook-mark.png")
+    link(rel="apple-touch-icon" href="/img/rangebook-mark.png")
+    meta(name="description" content="Explore the RangeBook 10.9 athlete dashboard, shooting planner, performance analytics, archive, and app screens.")
+    title Platform | RangeBook 10.9
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+    script(defer src="/js/script.js")
+  body
+    header.site-header
+      a.brand(href="index.html" aria-label="RangeBook 10.9 home")
+        span.brand__mark(aria-hidden="true")
+          svg(viewBox="0 0 48 48")
+            circle(cx="24" cy="24" r="18")
+            circle(cx="24" cy="24" r="10")
+            circle(cx="24" cy="24" r="2")
+            path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+        span.brand__text
+          | RangeBook
+          strong 10.9
+      button.menu-toggle(type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation")
+        span
+        span
+      nav.primary-nav#primary-navigation(aria-label="Primary")
+        a.primary-nav__link(href="index.html") Home
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="platform.html" aria-current="page") Platform
+            button.nav-dropdown-toggle(type="button" aria-label="Open Platform menu" aria-expanded="false" aria-controls="platform-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#platform-submenu
+            a(href="platform.html#dashboard") Athlete dashboard
+            a(href="platform.html#planner") Training planner
+            a(href="platform.html#analytics") Performance analytics
+            a(href="platform.html#archive") Training archive
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="training.html") Training
+            button.nav-dropdown-toggle(type="button" aria-label="Open Training menu" aria-expanded="false" aria-controls="training-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#training-submenu
+            a(href="training.html#drills") Drills & practice
+            a(href="training.html#coaching") Coach connection
+            a(href="training.html#mental") Mental precision
+            a(href="training.html#matches") Match center
+            a(href="training.html#safety") Range safety
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="courses.html") Courses
+            button.nav-dropdown-toggle(type="button" aria-label="Open Courses menu" aria-expanded="false" aria-controls="courses-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#courses-submenu
+            a(href="courses.html#sport-disciplines") Sport disciplines
+            a(href="courses.html#athlete-development") Athlete development
+            a(href="courses.html#private-coaching") Private coaching
+        a.primary-nav__link(href="marketplace.html") Marketplace
+        a.primary-nav__link(href="about.html") About
+        a.primary-nav__link(href="contact.html") Contact
+        a.button.button--nav(href="https://play.google.com/store/apps/details?id=com.nimje.shooterspocketdiary" target="_blank" rel="noopener noreferrer")
+          | Install the app 
+          span(aria-hidden="true") ↗
+    main
+      section.page-hero
+        p.eyebrow
+          span.eyebrow__rule
+          |  Your training, connected
+        h1
+          | One platform.
+          br
+          em Every session.
+        p Plan your work, track your progress, and keep the details that support better performance in one focused space.
+      section.platform-section
+        .section-heading.reveal
+          p.eyebrow Built around the athlete
+          h2
+            | Find the tools
+            br
+            | for 
+            em your next step.
+          p Choose an area below or explore the app screens further down this page.
+        .platform-grid
+          article.platform-card.platform-card--feature.reveal#dashboard
+            span.platform-card__number 01
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                path(d="M7 39V9m0 30h34M14 32l8-9 7 4 12-15M33 12h8v8")
+            h3 Athlete dashboard
+            p See upcoming sessions, score trends, recent results, and core training areas at a glance.
+            a.card-link(href="#showcase" data-showcase="0")
+              | View dashboard 
+              span(aria-hidden="true") ↗
+          article.platform-card.reveal#planner
+            span.platform-card__number 02
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                path(d="M8 11h32v29H8zM15 5v12m18-12v12M8 20h32m-24 7h7m-7 7h14")
+            h3 Shooting planner
+            p Organize practice, physical training, and competition days in a single calendar.
+            a.card-link(href="#showcase" data-showcase="1")
+              | View planner 
+              span(aria-hidden="true") ↗
+          article.platform-card.reveal#analytics
+            span.platform-card__number 03
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                path(d="M8 40V8m0 32h34M14 31l8-8 7 4 12-15")
+                circle(cx="41" cy="12" r="3")
+            h3 Performance analytics
+            p Review match history, score patterns, consistency, and progress across training cycles.
+            a.card-link(href="#showcase" data-showcase="3")
+              | View analytics 
+              span(aria-hidden="true") ↗
+          article.platform-card.reveal#archive
+            span.platform-card__number 04
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                path(d="M5 13h16l4 5h18v22H5zM10 8h13l4 5")
+                path(d="M15 27h18m-18 7h12")
+            h3 Training archive
+            p Keep match data, training sessions, technical notes, trial logs, and personal reflections organized.
+            a.card-link(href="#showcase" data-showcase="4")
+              | View folders 
+              span(aria-hidden="true") ↗
+      section.showcase-section#showcase
+        .showcase-section__heading.reveal
+          .section-heading
+            p.eyebrow Inside the system
+            h2
+              | Every part of
+              br
+              | the 
+              em process.
+          p Explore the screens that support the complete training journey—from the first plan to the post-match review.
+        .showcase.reveal
+          .showcase__visual
+            .showcase__corner.showcase__corner--top(aria-hidden="true")
+            figure.showcase__frame
+              img#showcase-image(src="/img/athlete-dashboard.png" alt="Athlete dashboard showing schedule, score progression, and recent performance" loading="lazy")
+            .showcase__image-note
+              span APP SCREEN
+              span#showcase-number 01 / 08
+            .showcase__corner.showcase__corner--bottom(aria-hidden="true")
+          .showcase__content
+            p.showcase__kicker#showcase-kicker 01 / ATHLETE DASHBOARD
+            h3#showcase-title A clearer view of every training day.
+            p#showcase-description Start with the day ahead, track performance over time, and keep the details of your training in view.
+            .showcase__tabs(role="group" aria-label="Explore platform screens")
+              button.showcase-tab.is-active(type="button" aria-pressed="true" data-kicker="01 / ATHLETE DASHBOARD" data-title="A clearer view of every training day." data-description="Start with the day ahead, track performance over time, and keep the details of your training in view." data-image="/img/athlete-dashboard.png" data-alt="Athlete dashboard showing schedule, score progression, and recent performance") Dashboard
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="02 / SHOOTING PLANNER" data-title="Make room for the whole plan." data-description="Plan range sessions, physical training, recovery, and competitions with a clear monthly view." data-image="/img/shooting-planner.png" data-alt="Shooting planner calendar with scheduled practice, physical training, and competition sessions") Planner
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="03 / DRILL LIBRARY" data-title="Practice with a purpose." data-description="Search and select drills by focus, difficulty, equipment, and duration, then add a drill to your planner." data-image="/img/select-drill.png" data-alt="Drill library with search and categories for selecting training drills") Drills
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="04 / MATCH ANALYTICS" data-title="Find the story in your scores." data-description="Bring competition history and performance trends together to review how your training is translating." data-image="/img/match-updates.png" data-alt="Match center showing upcoming matches, performance analytics, and historical results") Analytics
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="05 / TRAINING ARCHIVE" data-title="Keep every note in its place." data-description="Organize match data, training sessions, technical notes, physical stats, and mindset reflections." data-image="/img/folder-system.png" data-alt="Training archive with folders for match data, sessions, technical notes, and more") Folders
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="06 / COACH CHAT" data-title="Feedback that stays with the session." data-description="Keep coaching conversations, voice notes, and target analysis connected to your training." data-image="/img/coach-advanced.png" data-alt="Coach chat with athlete feedback, target analysis, and voice notes") Coach chat
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="07 / MATCH UPDATES" data-title="Stay ready for match day." data-description="See scheduled events, registration windows, deadlines, and your competition history." data-image="/img/match-updates.png" data-alt="Match updates and upcoming competitions with registration deadlines") Matches
+              button.showcase-tab(type="button" aria-pressed="false" data-kicker="08 / MENTAL PRECISION" data-title="Train the mind as well." data-description="Build a more complete routine with mental-state check-ins, breathing exercises, and guided audio." data-image="/img/mental-precision.png" data-alt="Mental precision tools with daily state check-ins, breathing exercises, and audio modules") Mental
+            a.text-link.text-link--orange(href="contact.html")
+              | Ask us about the platform 
+              span(aria-hidden="true") ↗
+    footer.site-footer
+      .site-footer__main
+        .footer-brand
+          a.brand.brand--footer(href="index.html")
+            span.brand__mark(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                circle(cx="24" cy="24" r="18")
+                circle(cx="24" cy="24" r="10")
+                circle(cx="24" cy="24" r="2")
+                path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+            span.brand__text
+              | RangeBook
+              strong 10.9
+          p A precision training platform for shooting athletes and coaches.
+        .footer-links
+          p.footer-links__title Explore
+          a(href="platform.html") Platform
+          a(href="platform.html#showcase") Screens
+          a(href="training.html") Training
+          a(href="courses.html") Courses
+          a(href="marketplace.html") Marketplace
+        .footer-links
+          p.footer-links__title Contact
+          a(href="contact.html#contact") Submit an enquiry
+          a(href="https://wa.me/918010368258" target="_blank" rel="noopener noreferrer") WhatsApp
+          a(href="contact.html") Contact page
+        .footer-links
+          p.footer-links__title Information
+          a(href="https://shooterspocketdiary.com/privacy-policy" target="_blank" rel="noopener noreferrer") Privacy policy
+          a(href="https://shooterspocketdiary.com/terms-and-conditions" target="_blank" rel="noopener noreferrer") Terms & conditions
+          a(href="https://shooterspocketdiary.com/refund-policy" target="_blank" rel="noopener noreferrer") Refund policy
+          a(href="https://shooterspocketdiary.com/delete-account" target="_blank" rel="noopener noreferrer") Delete account
+      .site-footer__bottom
+        span
+          | © 
+          span#current-year
+          |  RangeBook 10.9
+        span For shooters, by shooters.
+        a(href="index.html") Back to home ↑

@@ -1,0 +1,198 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="theme-color" content="#111317")
+    link(rel="icon" type="image/png" sizes="430x430" href="/img/rangebook-mark.png")
+    link(rel="apple-touch-icon" href="/img/rangebook-mark.png")
+    meta(name="description" content="Explore sporting essentials and current Free and Premium membership plans for RangeBook 10.9.")
+    title Marketplace | RangeBook 10.9
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+    script(defer src="/js/script.js")
+  body
+    header.site-header
+      a.brand(href="index.html" aria-label="RangeBook 10.9 home")
+        span.brand__mark(aria-hidden="true")
+          svg(viewBox="0 0 48 48")
+            circle(cx="24" cy="24" r="18")
+            circle(cx="24" cy="24" r="10")
+            circle(cx="24" cy="24" r="2")
+            path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+        span.brand__text
+          | RangeBook
+          strong 10.9
+      button.menu-toggle(type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation")
+        span
+        span
+      nav.primary-nav#primary-navigation(aria-label="Primary")
+        a.primary-nav__link(href="index.html") Home
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="platform.html") Platform
+            button.nav-dropdown-toggle(type="button" aria-label="Open Platform menu" aria-expanded="false" aria-controls="platform-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#platform-submenu
+            a(href="platform.html#dashboard") Athlete dashboard
+            a(href="platform.html#planner") Training planner
+            a(href="platform.html#analytics") Performance analytics
+            a(href="platform.html#archive") Training archive
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="training.html") Training
+            button.nav-dropdown-toggle(type="button" aria-label="Open Training menu" aria-expanded="false" aria-controls="training-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#training-submenu
+            a(href="training.html#drills") Drills & practice
+            a(href="training.html#coaching") Coach connection
+            a(href="training.html#mental") Mental precision
+            a(href="training.html#matches") Match center
+            a(href="training.html#safety") Range safety
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="courses.html") Courses
+            button.nav-dropdown-toggle(type="button" aria-label="Open Courses menu" aria-expanded="false" aria-controls="courses-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#courses-submenu
+            a(href="courses.html#sport-disciplines") Sport disciplines
+            a(href="courses.html#athlete-development") Athlete development
+            a(href="courses.html#private-coaching") Private coaching
+        a.primary-nav__link(href="marketplace.html" aria-current="page") Marketplace
+        a.primary-nav__link(href="about.html") About
+        a.primary-nav__link(href="contact.html") Contact
+        a.button.button--nav(href="https://play.google.com/store/apps/details?id=com.nimje.shooterspocketdiary" target="_blank" rel="noopener noreferrer")
+          | Install the app 
+          span(aria-hidden="true") ↗
+    main
+      section.page-hero
+        p.eyebrow
+          span.eyebrow__rule
+          |  More than a training log
+        h1
+          | Tools for the
+          br
+          em whole journey.
+        p Explore sporting essentials, membership information, and connected training support.
+      section.services-section#services
+        .section-heading.section-heading--center.reveal
+          p.eyebrow Marketplace overview
+          h2
+            | Training essentials
+            br
+            em for the journey.
+          p Get an overview of apparel, practice materials, and protective gear. Contact us for current availability; this page is an overview, not a product catalog.
+        .service-grid
+          article.service-card.reveal#gear
+            span.service-card__index 01 / APPAREL
+            h3 Sport apparel
+            p Ask about apparel and other sporting essentials for your training routine.
+            a.card-link(href="contact.html")
+              | Ask about availability 
+              span(aria-hidden="true") ↗
+          article.service-card.reveal
+            span.service-card__index 02 / PRACTICE
+            h3 Targets and training aids
+            p Get in touch for information about practice materials and training resources.
+            a.card-link(href="contact.html")
+              | Ask our team 
+              span(aria-hidden="true") ↗
+          article.service-card.reveal
+            span.service-card__index 03 / PROTECTION
+            h3 Eye and ear protection
+            p Contact us for current information about protective sporting essentials.
+            a.card-link(href="contact.html")
+              | Contact our team 
+              span(aria-hidden="true") ↗
+      section.services-section#membership
+        .section-heading.section-heading--center.reveal
+          p.eyebrow Membership information
+          h2
+            | Choose your diary
+            br
+            em membership.
+          p Start with the free diary or choose Premium for ad-free use, advanced progress charts, and PDF or CSV exports. Prices and features below reflect the published app plans.
+        .service-grid.membership-grid
+          article.service-card.membership-card.reveal
+            span.service-card__index FREE / BASIC
+            h3 Free
+            p.membership-card__price
+              | ₹0 
+              span to start
+            ul.membership-card__features
+              li Core practice and match diary
+              li Notice board and circulars
+              li Range reviews, community blogs, and rules library
+              li Supported by ads
+            a.card-link(href="contact.html")
+              | Ask a question 
+              span(aria-hidden="true") ↗
+          article.service-card.membership-card.reveal
+            span.service-card__index PREMIUM / MONTHLY
+            h3 Premium Monthly
+            p.membership-card__price
+              | ₹99 
+              span / month
+            ul.membership-card__features
+              li Everything in Free
+              li No ads
+              li Advanced progress charts
+              li Diary export as PDF or CSV
+            a.card-link(href="contact.html")
+              | Ask about Premium 
+              span(aria-hidden="true") ↗
+          article.service-card.membership-card.membership-card--featured.reveal
+            span.service-card__index PREMIUM / ANNUAL · BEST VALUE
+            h3 Annual
+            p.membership-card__price
+              | ₹999 
+              span / year
+            ul.membership-card__features
+              li Everything in Free
+              li No ads
+              li Advanced progress charts
+              li Diary export as PDF or CSV
+            a.card-link(href="contact.html")
+              | Ask about Premium 
+              span(aria-hidden="true") ↗
+    footer.site-footer
+      .site-footer__main
+        .footer-brand
+          a.brand.brand--footer(href="index.html")
+            span.brand__mark(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                circle(cx="24" cy="24" r="18")
+                circle(cx="24" cy="24" r="10")
+                circle(cx="24" cy="24" r="2")
+                path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+            span.brand__text
+              | RangeBook
+              strong 10.9
+          p A precision training platform for shooting athletes and coaches.
+        .footer-links
+          p.footer-links__title Explore
+          a(href="platform.html") Platform
+          a(href="platform.html#showcase") Screens
+          a(href="training.html") Training
+          a(href="courses.html") Courses
+          a(href="marketplace.html") Marketplace
+        .footer-links
+          p.footer-links__title Contact
+          a(href="contact.html#contact") Submit an enquiry
+          a(href="https://wa.me/918010368258" target="_blank" rel="noopener noreferrer") WhatsApp
+          a(href="contact.html") Contact page
+        .footer-links
+          p.footer-links__title Information
+          a(href="https://shooterspocketdiary.com/privacy-policy" target="_blank" rel="noopener noreferrer") Privacy policy
+          a(href="https://shooterspocketdiary.com/terms-and-conditions" target="_blank" rel="noopener noreferrer") Terms & conditions
+          a(href="https://shooterspocketdiary.com/refund-policy" target="_blank" rel="noopener noreferrer") Refund policy
+          a(href="https://shooterspocketdiary.com/delete-account" target="_blank" rel="noopener noreferrer") Delete account
+      .site-footer__bottom
+        span
+          | © 
+          span#current-year
+          |  RangeBook 10.9
+        span For shooters, by shooters.
+        a(href="index.html") Back to home ↑

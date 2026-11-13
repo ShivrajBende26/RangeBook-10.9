@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start RangeBook 10.9",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"start"
+			],
+			"isBackground": true
+		},
+		{
+			"label": "Start RangeBook 10.9 - Updated Assets",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"set PORT=3001&& npm start"
+			],
+			"isBackground": true
+		},
+		{
+			"label": "Start RangeBook 10.9 - Pug",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"set PORT=3002&& npm start"
+			],
+			"isBackground": true
+		},
+		{
+			"label": "Start RangeBook 10.9 - HTML Overview",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"set PORT=3003&& npm start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

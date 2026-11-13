@@ -1,0 +1,23 @@
+{
+  "name": "shooters-pocket-diary-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RangeBook 10.9 marketing site and verified events API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check app.js && node --check models/eventModel.js && node --check models/contactModel.js && node --check controllers/eventController.js && node --check controllers/contactController.js && node --check controllers/pageController.js && node --check routes/eventRoutes.js && node --check routes/contactRoutes.js && node --check routes/pageRoutes.js && node --check middleware/eventAccess.js && node --check services/eventFeedService.js && node --check utils/eventValidation.js && node --check utils/contactValidation.js && node --check utils/contactCsv.js && node --check views.test.js && node --check server.test.js && node --check controllers/contactController.test.js && node --check public/js/events.js && node --check public/js/script.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "node-ical": "^0.27.6",
+    "pg": "^8.16.3",
+    "pug": "^3.0.4"
+  }
+}

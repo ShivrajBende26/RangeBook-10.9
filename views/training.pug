@@ -1,0 +1,299 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="theme-color" content="#111317")
+    link(rel="icon" type="image/png" sizes="430x430" href="/img/rangebook-mark.png")
+    link(rel="apple-touch-icon" href="/img/rangebook-mark.png")
+    meta(name="description" content="Explore drills, coaching, mental routines, and match preparation for shooting athletes.")
+    title Training | RangeBook 10.9
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+    script(defer src="/js/script.js")
+    script(defer src="/js/events.js")
+  body
+    header.site-header
+      a.brand(href="index.html" aria-label="RangeBook 10.9 home")
+        span.brand__mark(aria-hidden="true")
+          svg(viewBox="0 0 48 48")
+            circle(cx="24" cy="24" r="18")
+            circle(cx="24" cy="24" r="10")
+            circle(cx="24" cy="24" r="2")
+            path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+        span.brand__text
+          | RangeBook
+          strong 10.9
+      button.menu-toggle(type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation")
+        span
+        span
+      nav.primary-nav#primary-navigation(aria-label="Primary")
+        a.primary-nav__link(href="index.html") Home
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="platform.html") Platform
+            button.nav-dropdown-toggle(type="button" aria-label="Open Platform menu" aria-expanded="false" aria-controls="platform-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#platform-submenu
+            a(href="platform.html#dashboard") Athlete dashboard
+            a(href="platform.html#planner") Training planner
+            a(href="platform.html#analytics") Performance analytics
+            a(href="platform.html#archive") Training archive
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="training.html" aria-current="page") Training
+            button.nav-dropdown-toggle(type="button" aria-label="Open Training menu" aria-expanded="false" aria-controls="training-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#training-submenu
+            a(href="training.html#drills") Drills & practice
+            a(href="training.html#coaching") Coach connection
+            a(href="training.html#mental") Mental precision
+            a(href="training.html#matches") Match center
+            a(href="training.html#safety") Range safety
+        .nav-item
+          .nav-item__top
+            a.primary-nav__link(href="courses.html") Courses
+            button.nav-dropdown-toggle(type="button" aria-label="Open Courses menu" aria-expanded="false" aria-controls="courses-submenu")
+              span(aria-hidden="true") ⌄
+          .nav-dropdown__menu#courses-submenu
+            a(href="courses.html#sport-disciplines") Sport disciplines
+            a(href="courses.html#athlete-development") Athlete development
+            a(href="courses.html#private-coaching") Private coaching
+        a.primary-nav__link(href="marketplace.html") Marketplace
+        a.primary-nav__link(href="about.html") About
+        a.primary-nav__link(href="contact.html") Contact
+        a.button.button--nav(href="https://play.google.com/store/apps/details?id=com.nimje.shooterspocketdiary" target="_blank" rel="noopener noreferrer")
+          | Install the app 
+          span(aria-hidden="true") ↗
+    main
+      section.page-hero
+        p.eyebrow
+          span.eyebrow__rule
+          |  Train beyond the firing line
+        h1
+          | Build the work
+          br
+          em behind the score.
+        p Prepare with structured drills, coaching feedback, mindset tools, and a clearer view of competition.
+      section.platform-section
+        .section-heading.reveal
+          p.eyebrow Plan, practice, perform
+          h2
+            | Training for
+            br
+            em every stage.
+          p Build a consistent routine from purposeful practice through the next match.
+        .platform-grid
+          article.platform-card.platform-card--feature.reveal#drills
+            span.platform-card__number 01
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                circle(cx="24" cy="24" r="18")
+                circle(cx="24" cy="24" r="10")
+                path(d="M24 17v14m-7-7h14")
+            h3 Drill library
+            p Find structured practice by drill, equipment, level, and training focus, then add it to your plan.
+            a.card-link(href="platform.html#showcase")
+              | Explore app screens 
+              span(aria-hidden="true") ↗
+          article.platform-card.reveal#matches
+            span.platform-card__number 02
+            span.line-icon(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                path(d="M10 7h28v34H10zM17 15h14m-14 7h14m-14 7h7")
+                path(d="m29 34 3 3 6-7")
+            h3 Match center
+            p Keep scheduled events, registration reminders, results, and match history in view.
+            a.card-link(href="platform.html#showcase")
+              | Explore app screens 
+              span(aria-hidden="true") ↗
+      section.services-section#courses
+        .section-heading.section-heading--center.reveal
+          p.eyebrow Training pathways
+          h2
+            | Build your own
+            br
+            em training pathway.
+          p Explore sport-focused coaching pathways and ask our team about current course availability and schedules.
+        .service-grid
+          article.service-card.reveal
+            span.service-card__index 01 / FUNDAMENTALS
+            h3 Sport discipline courses
+            p Explore rifle, pistol, and shotgun sport coaching pathways at a high level.
+            a.card-link(href="courses.html#sport-disciplines")
+              | View course options 
+              span(aria-hidden="true") ↗
+          article.service-card.reveal
+            span.service-card__index 02 / COMPETITION
+            h3 Match preparation
+            p Bring preparation, event reminders, results, and post-match reflection together.
+            a.card-link(href="courses.html#athlete-development")
+              | Explore athlete development 
+              span(aria-hidden="true") ↗
+          article.service-card.reveal
+            span.service-card__index 03 / MINDSET
+            h3 Mental preparation
+            p Make focus, breathing, and reflection part of a more complete training plan.
+            a.card-link(href="courses.html#athlete-development")
+              | Explore mental tools 
+              span(aria-hidden="true") ↗
+        .schedule-notice.reveal
+          div
+            p.eyebrow Course schedules
+            h3 Confirm availability before booking
+            p Course dates, instructor availability, and venue are confirmed by the team; no unverified schedules or prices are listed here.
+          a.button.button--orange(href="courses.html")
+            | Explore all courses 
+            span(aria-hidden="true") ↗
+      section.services-section#events
+        .section-heading.section-heading--center.reveal
+          p.eyebrow Competition calendar / India
+          h2
+            | Results, notices
+            br
+            em & next dates.
+          p Check NRAI for national notices and results, and ISSF for international competition dates. Local event information should be confirmed with the district, state, or club organizer.
+        form.event-filter(data-event-filter)
+          label(for="training-filter-state")
+            | State
+            input#training-filter-state(name="state" type="search" placeholder="Any state")
+          label(for="training-filter-district")
+            | District
+            input#training-filter-district(name="district" type="search" placeholder="Any district")
+          label(for="training-filter-city")
+            | City
+            input#training-filter-city(name="city" type="search" placeholder="Any city")
+          button.button.button--dark(type="submit") Filter events
+        .service-grid(data-events-list data-exclude-event-type="news" aria-live="polite")
+          article.service-card.event-empty
+            span.service-card__index OFFICIAL EVENT SOURCES
+            h3 Check current competition notices
+            p Open NRAI’s official notices and results while the verified events service is being connected.
+            a.card-link(href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer")
+              | View NRAI notices 
+              span(aria-hidden="true") ↗
+        p.section-source(data-events-updated) Event listings are served by the verified events service.
+        .schedule-notice.reveal
+          div
+            p.eyebrow Next competition
+            h3 Confirm dates with the official notice
+            p NRAI maintains national notices and public disclosures for affiliated units and national/zonal calendars; ISSF publishes the international competition calendar. District and club fixtures may be announced separately by their organizers.
+          a.button.button--orange(href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer")
+            | View NRAI notices 
+            span(aria-hidden="true") ↗
+          a.text-link(href="https://www.thenrai.in/about_us.aspx?link=6" target="_blank" rel="noopener noreferrer")
+            | NRAI calendars & affiliated units 
+            span(aria-hidden="true") ↗
+          a.text-link(href="https://www.issf-sports.org/calendar" target="_blank" rel="noopener noreferrer")
+            | ISSF international calendar 
+            span(aria-hidden="true") ↗
+      section.services-section#safety
+        .section-heading.section-heading--center.reveal
+          p.eyebrow Responsible sport
+          h2
+            | Safety comes
+            br
+            em before the score.
+          p General reminders for participating in organized sport. Always follow your venue's posted rules and the instructions of its authorized staff.
+        .service-grid
+          article.service-card.reveal
+            span.service-card__index 01 / VENUE RULES
+            h3 Follow range direction
+            p Attend only at authorized venues and follow the range officer's directions and the venue's current safety procedures.
+          article.service-card.reveal
+            span.service-card__index 02 / PERSONAL SAFETY
+            h3 Use required protection
+            p Wear the protective equipment required by the venue and speak with staff if you need guidance before participating.
+          article.service-card.reveal
+            span.service-card__index 03 / EMERGENCY PLAN
+            h3 Know who to contact
+            p Learn the venue's emergency and first-aid arrangements. Stop and alert authorized staff if a safety concern arises.
+      section.coach-section#coaching
+        .coach-section__image.reveal
+          .coach-section__image-frame
+            img(src="/img/coach-chat.png" alt="Coach conversation interface for sharing training feedback" loading="lazy")
+          span.coach-section__stamp
+            | ATHLETE
+            br
+            | + COACH
+        .coach-section__copy.reveal
+          p.eyebrow Coaching, in context
+          h2
+            | Good feedback
+            br
+            | moves you 
+            em forward.
+          p Keep the conversation connected to the training. Share updates, receive feedback, and make it easier to follow the thread from one session to the next.
+          .coach-points
+            div
+              span 01
+              strong Direct coach conversations
+            div
+              span 02
+              strong Target analysis and session notes
+            div
+              span 03
+              strong Voice and video communication
+          a.button.button--dark(href="contact.html")
+            | Talk about coaching 
+            span(aria-hidden="true") ↗
+      section.mind-section#mental
+        .mind-section__copy.reveal
+          p.eyebrow Train beyond the firing line
+          h2
+            | Build your
+            br
+            em mental routine.
+          p Prepare for pressure with tools for focus, reflection, breathing, and recovery—alongside your technical and physical work.
+          .mind-tags
+            span Daily state check-in
+            span Breathing drills
+            span Guided audio
+            span Mindset archive
+          a.text-link(href="platform.html#showcase")
+            | Explore platform screens 
+            span(aria-hidden="true") ↗
+        .mind-section__screen.reveal
+          img(src="/img/mental-precision.png" alt="Mental training screen with daily check-in, breathing, and audio tools" loading="lazy")
+          span.screen-label MINDSET / PERFORMANCE
+    footer.site-footer
+      .site-footer__main
+        .footer-brand
+          a.brand.brand--footer(href="index.html")
+            span.brand__mark(aria-hidden="true")
+              svg(viewBox="0 0 48 48")
+                circle(cx="24" cy="24" r="18")
+                circle(cx="24" cy="24" r="10")
+                circle(cx="24" cy="24" r="2")
+                path(d="M24 1v10m0 26v10M1 24h10m26 0h10")
+            span.brand__text
+              | RangeBook
+              strong 10.9
+          p A precision training platform for shooting athletes and coaches.
+        .footer-links
+          p.footer-links__title Explore
+          a(href="platform.html") Platform
+          a(href="platform.html#showcase") Screens
+          a(href="training.html") Training
+          a(href="courses.html") Courses
+          a(href="marketplace.html") Marketplace
+        .footer-links
+          p.footer-links__title Contact
+          a(href="contact.html#contact") Submit an enquiry
+          a(href="https://wa.me/918010368258" target="_blank" rel="noopener noreferrer") WhatsApp
+          a(href="contact.html") Contact page
+        .footer-links
+          p.footer-links__title Information
+          a(href="https://shooterspocketdiary.com/privacy-policy" target="_blank" rel="noopener noreferrer") Privacy policy
+          a(href="https://shooterspocketdiary.com/terms-and-conditions" target="_blank" rel="noopener noreferrer") Terms & conditions
+          a(href="https://shooterspocketdiary.com/refund-policy" target="_blank" rel="noopener noreferrer") Refund policy
+          a(href="https://shooterspocketdiary.com/delete-account" target="_blank" rel="noopener noreferrer") Delete account
+      .site-footer__bottom
+        span
+          | © 
+          span#current-year
+          |  RangeBook 10.9
+        span For shooters, by shooters.
+        a(href="index.html") Back to home ↑

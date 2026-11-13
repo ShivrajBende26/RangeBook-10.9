@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    Editable homepage: public/index.html
+    Navigation pages: platform.html, training.html, courses.html, marketplace.html,
+    about.html, and contact.html. Admin page: event-admin.html.
+    Pug page templates live in views/; shared assets live in public/css/, public/js/, and public/img/.
+    Add visible page links in the navigation below. Pug pages also need a route entry in controllers/pageController.js.
+  -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#111317">
+    <link rel="icon" type="image/png" sizes="430x430" href="/img/rangebook-mark.png">
+    <link rel="apple-touch-icon" href="/img/rangebook-mark.png">
+    <meta name="description" content="RangeBook 10.9 is a precision training platform for shooting athletes and coaches. Plan sessions, track performance, and stay match-ready.">
+    <title>RangeBook 10.9 | Precision Training Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/events.js"></script>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="index.html" aria-label="RangeBook 10.9 home"><span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="18"></circle>
+            <circle cx="24" cy="24" r="10"></circle>
+            <circle cx="24" cy="24" r="2"></circle>
+            <path d="M24 1v10m0 26v10M1 24h10m26 0h10"></path>
+          </svg></span><span class="brand__text">RangeBook<strong>10.9</strong></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary"><a class="primary-nav__link" href="index.html" aria-current="page">Home</a>
+        <div class="nav-item">
+          <div class="nav-item__top"><a class="primary-nav__link" href="platform.html">Platform</a>
+            <button class="nav-dropdown-toggle" type="button" aria-label="Open Platform menu" aria-expanded="false" aria-controls="platform-submenu"><span aria-hidden="true">⌄</span></button>
+          </div>
+          <div class="nav-dropdown__menu" id="platform-submenu"><a href="platform.html#dashboard">Athlete dashboard</a><a href="platform.html#planner">Training planner</a><a href="platform.html#analytics">Performance analytics</a><a href="platform.html#archive">Training archive</a></div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-item__top"><a class="primary-nav__link" href="training.html">Training</a>
+            <button class="nav-dropdown-toggle" type="button" aria-label="Open Training menu" aria-expanded="false" aria-controls="training-submenu"><span aria-hidden="true">⌄</span></button>
+          </div>
+          <div class="nav-dropdown__menu" id="training-submenu"><a href="training.html#drills">Drills & practice</a><a href="training.html#coaching">Coach connection</a><a href="training.html#mental">Mental precision</a><a href="training.html#matches">Match center</a><a href="training.html#safety">Range safety</a></div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-item__top"><a class="primary-nav__link" href="courses.html">Courses</a>
+            <button class="nav-dropdown-toggle" type="button" aria-label="Open Courses menu" aria-expanded="false" aria-controls="courses-submenu"><span aria-hidden="true">⌄</span></button>
+          </div>
+          <div class="nav-dropdown__menu" id="courses-submenu"><a href="courses.html#sport-disciplines">Sport disciplines</a><a href="courses.html#athlete-development">Athlete development</a><a href="courses.html#private-coaching">Private coaching</a></div>
+        </div><a class="primary-nav__link" href="marketplace.html">Marketplace</a><a class="primary-nav__link" href="about.html">About</a><a class="primary-nav__link" href="contact.html">Contact</a><a class="button button--nav" href="https://play.google.com/store/apps/details?id=com.nimje.shooterspocketdiary" target="_blank" rel="noopener noreferrer">Install the app <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" aria-label="RangeBook 10.9 platform highlights">
+        <div class="hero__texture" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow"><span class="eyebrow__rule"></span> A precision training platform</p>
+          <div class="hero-slides" aria-live="polite">
+            <article class="hero-slide is-active" data-hero-slide aria-hidden="false">
+              <p class="hero-slide__index">01 <span>/</span> ATHLETE DASHBOARD</p>
+              <h1>Train with<br><em>intention.</em></h1>
+              <p class="hero-slide__copy">Bring your sessions, scores, schedule, and progress into one focused training space.</p><a class="button button--orange" href="platform.html#dashboard">Explore the platform <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="hero-slide" data-hero-slide aria-hidden="true">
+              <p class="hero-slide__index">02 <span>/</span> SHOOTING PLANNER</p>
+              <h1>Plan every<br><em>session.</em></h1>
+              <p class="hero-slide__copy">Shape your week around practice, physical work, recovery, and competition days.</p><a class="button button--orange" href="platform.html#planner">Explore the planner <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="hero-slide" data-hero-slide aria-hidden="true">
+              <p class="hero-slide__index">03 <span>/</span> COACH CONNECTION</p>
+              <h1>Better work,<br><em>together.</em></h1>
+              <p class="hero-slide__copy">Keep coaching feedback, target analysis, and training conversations close to the work.</p><a class="button button--orange" href="training.html#coaching">Explore coaching <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="hero__controls">
+            <button class="hero-arrow hero-arrow--previous" type="button" aria-label="Previous slide">←</button>
+            <div class="hero-dots" role="group" aria-label="Choose a hero slide">
+              <button class="hero-dot is-active" type="button" aria-label="Show athlete dashboard" aria-pressed="true"></button>
+              <button class="hero-dot" type="button" aria-label="Show training planner" aria-pressed="false"></button>
+              <button class="hero-dot" type="button" aria-label="Show coach connection" aria-pressed="false"></button>
+            </div>
+            <button class="hero-arrow hero-arrow--next" type="button" aria-label="Next slide">→</button><span class="hero__control-label">01 / 03</span>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__crosshair" aria-hidden="true"></div>
+          <div class="hero__visual-label"><span>RANGEBOOK 10.9</span><span>FIELD SYSTEM / 01</span></div>
+          <div class="hero-screen-stack"><img class="hero-screen is-active" data-hero-image src="/img/athlete-dashboard.png" alt="Athlete dashboard with session schedule, score progression, recent performance, and training disciplines" fetchpriority="high"><img class="hero-screen" data-hero-image src="/img/shooting-planner.png" alt="Training planner with monthly calendar, upcoming sessions, and goals" aria-hidden="true"><img class="hero-screen" data-hero-image src="/img/coach-advanced.png" alt="Coach chat with athlete feedback and annotated target analysis" aria-hidden="true"></div>
+          <div class="hero__visual-caption"><span class="caption-mark"></span> A clearer view of your training</div><span class="hero__vertical" aria-hidden="true">PREPARE · PRACTICE · PERFORM</span>
+        </div><a class="hero__scroll" href="#discover"><span></span> Scroll to explore</a>
+      </section>
+      <div class="discipline-ribbon" aria-label="Training disciplines"><span>Built for shooting athletes</span><span>PLAN</span><i></i><span>TRAIN</span><i></i><span>ANALYZE</span><i></i><span>REFINE</span></div>
+      <section class="intro-section" id="discover">
+        <div class="intro-section__index reveal"><span>01</span><span class="index-line"></span><span>THE APPROACH</span></div>
+        <div class="intro-section__copy reveal">
+          <p class="eyebrow">The work behind the result</p>
+          <h2>Precision is built<br>between <em>matches.</em></h2>
+          <p>Good performance is more than a score. It is the plan before a session, the notes after it, the coach’s perspective, and the patterns you notice over time. RangeBook 10.9 brings those pieces together.</p><a class="text-link" href="about.html">Discover our approach <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="intro-section__aside reveal"><span class="intro-section__target" aria-hidden="true">
+            <svg viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="67"></circle>
+              <circle cx="80" cy="80" r="46"></circle>
+              <circle cx="80" cy="80" r="23"></circle>
+              <circle cx="80" cy="80" r="4"></circle>
+              <path d="M80 0v55m0 50v55M0 80h55m50 0h55"></path>
+            </svg></span>
+          <p>One place for the details that make the next session better.</p>
+        </div>
+      </section>
+      <section class="platform-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Explore the platform</p>
+          <h2>Choose your<br><em>next step.</em></h2>
+          <p>Open a dedicated page to explore the tools, training, and services built around the athlete.</p>
+        </div>
+        <div class="platform-grid">
+          <article class="platform-card platform-card--feature reveal"><span class="platform-card__number">01</span><span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M7 39V9m0 30h34M14 32l8-9 7 4 12-15M33 12h8v8"></path>
+              </svg></span>
+            <h3>Athlete platform</h3>
+            <p>Explore your dashboard, shooting planner, analytics, archive, and product screens.</p><a class="card-link" href="platform.html">Explore platform <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="platform-card reveal"><span class="platform-card__number">02</span><span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="18"></circle>
+                <circle cx="24" cy="24" r="10"></circle>
+                <path d="M24 17v14m-7-7h14"></path>
+              </svg></span>
+            <h3>Training</h3>
+            <p>Build your routine with drills, coaching conversations, mindset tools, and match preparation.</p><a class="card-link" href="training.html">Explore training <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="platform-card reveal"><span class="platform-card__number">03</span><span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M5 13h16l4 5h18v22H5zM10 8h13l4 5"></path>
+                <path d="M15 27h18m-18 7h12"></path>
+              </svg></span>
+            <h3>Marketplace</h3>
+            <p>Explore sporting essentials and ask about current availability.</p><a class="card-link" href="marketplace.html">Visit marketplace <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="platform-card reveal"><span class="platform-card__number">04</span><span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="18"></circle>
+                <circle cx="24" cy="24" r="10"></circle>
+                <circle cx="24" cy="24" r="2"></circle>
+              </svg></span>
+            <h3>About the diary</h3>
+            <p>Learn how the platform brings planning, practice, and performance into one place.</p><a class="card-link" href="about.html">Our approach <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+      <section class="services-section" id="training-features">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">A stronger training foundation</p>
+          <h2>Support every<br><em>step forward.</em></h2>
+          <p>Four connected parts of a responsible, athlete-first training journey.</p>
+        </div>
+        <div class="service-grid home-capability-grid">
+          <article class="service-card reveal"><span class="service-card__index">01 / PROGRESSION</span>
+            <h3>Advanced athlete development</h3>
+            <p>Build a consistent plan, review performance trends, and set thoughtful goals with your coach.</p><a class="card-link" href="courses.html#athlete-development">Explore development <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">02 / COACHING</span>
+            <h3>Instructor-led coaching</h3>
+            <p>Discuss sport goals and coaching availability with our team before choosing a course.</p><a class="card-link" href="courses.html#private-coaching">Ask about coaching <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">03 / READINESS</span>
+            <h3>Sport and safety readiness</h3>
+            <p>Prepare with venue-approved protective equipment and follow the guidance of authorized staff.</p><a class="card-link" href="training.html#safety">Review safety guidance <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">04 / VENUES</span>
+            <h3>Authorized training venues</h3>
+            <p>Confirm venue approval, instructor availability, and local safety requirements before attending.</p><a class="card-link" href="contact.html">Contact our team <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+      <section class="services-section" id="updates">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">News, notes & updates</p>
+          <h2>Stay connected<br><em>to your sport.</em></h2>
+          <p>App updates and training ideas from RangeBook 10.9, alongside links to official Indian shooting-sport notices and results.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-card__index">APP FEATURE / NOTICE BOARD</span>
+            <h3>Match notices in one place</h3>
+            <p>Follow match announcements, registration deadlines, and approved circulars for state and national events.</p><a class="card-link" href="platform.html#showcase">Explore the platform <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">TRAINING NOTE / REVIEW</span>
+            <h3>Keep a record of progress</h3>
+            <p>Bring practice notes, match entries, and reflections together to make your own training history easier to review.</p><a class="card-link" href="platform.html#archive">See the training archive <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">APP FEATURE / COACHING</span>
+            <h3>Share training on your terms</h3>
+            <p>Coach access is permission-based, so athletes choose who can view or add feedback to their diary.</p><a class="card-link" href="training.html#coaching">Explore coach connection <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card reveal"><span class="service-card__index">OFFICIAL / NRAI NOTICES</span>
+            <h3>Check current competition notices</h3>
+            <p>Open the NRAI notice archive for current national announcements, schedules, and registration information.</p><a class="card-link" href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer">Open official notices <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <div class="service-grid" data-events-list data-event-type="news" aria-live="polite">
+          <article class="service-card event-empty"><span class="service-card__index">VERIFIED UPDATES</span>
+            <h3>Check official sport notices</h3>
+            <p>Updates submitted with public sources appear here after review.</p><a class="card-link" href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer">View NRAI notices <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="section-source">Official sources: <a href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer">NRAI notices</a>, <a href="https://www.thenrai.in/about_us.aspx?link=6" target="_blank" rel="noopener noreferrer">NRAI affiliated-unit and national/zonal calendar disclosures</a>, and the <a href="https://www.issf-sports.org/calendar" target="_blank" rel="noopener noreferrer">ISSF international calendar</a>. Confirm dates and eligibility with the organizer.</p>
+      </section>
+      <section class="services-section" id="events">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Competition calendar / India</p>
+          <h2>Follow the latest<br><em>match updates.</em></h2>
+          <p>Use official NRAI pages for national notices and results, and the ISSF calendar for international competitions. Dates, venues, eligibility, and registration windows can change; confirm details at the source.</p>
+        </div>
+        <form class="event-filter" data-event-filter>
+          <label for="event-filter-state">State
+            <input id="event-filter-state" name="state" type="search" placeholder="Any state">
+          </label>
+          <label for="event-filter-district">District
+            <input id="event-filter-district" name="district" type="search" placeholder="Any district">
+          </label>
+          <label for="event-filter-city">City
+            <input id="event-filter-city" name="city" type="search" placeholder="Any city">
+          </label>
+          <button class="button button--dark" type="submit">Filter events</button>
+        </form>
+        <div class="service-grid" data-events-list data-exclude-event-type="news" aria-live="polite">
+          <article class="service-card event-empty"><span class="service-card__index">OFFICIAL EVENT SOURCES</span>
+            <h3>Check current competition notices</h3>
+            <p>Open NRAI’s official notices and results while the verified events service is being connected.</p><a class="card-link" href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer">View NRAI notices <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="section-source" data-events-updated>Event listings are served by the verified events service.</p>
+        <div class="schedule-notice reveal">
+          <div>
+            <p class="eyebrow">Upcoming fixtures</p>
+            <h3>Check the latest official schedule</h3>
+            <p>NRAI publishes national notices; the ISSF calendar lists international competitions. State, district, and club fixtures may be published separately by their organizers.</p>
+          </div><a class="button button--orange" href="https://www.thenrai.in/Archieves.aspx" target="_blank" rel="noopener noreferrer">Open NRAI notices <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.issf-sports.org/calendar" target="_blank" rel="noopener noreferrer">ISSF international calendar <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="event-submit-wrap reveal">
+          <div>
+            <p class="eyebrow">Help keep the calendar current</p>
+            <h3>Submit an event<br><em>for review.</em></h3>
+            <p>Organizers and athletes can suggest a competition, training session, or official sport notice. Include a public source link; entries appear only after verification.</p>
+            <p>Only public schedule details are requested. Approved entries and their source links will be visible to visitors.</p>
+          </div>
+          <form class="contact-form event-submit-form" data-event-submission>
+            <label for="event-title">Event title</label>
+            <input id="event-title" name="title" type="text" maxlength="180" required>
+            <label for="event-type">Event type</label>
+            <select id="event-type" name="eventType" required>
+              <option value="competition">Competition or match</option>
+              <option value="training">Training event</option>
+              <option value="news">Official sport update or notice</option>
+            </select>
+            <label for="event-starts">Start date</label>
+            <input id="event-starts" name="startsAt" type="date" required>
+            <label for="event-ends">End date</label>
+            <input id="event-ends" name="endsAt" type="date" required>
+            <label for="event-organizer">Organizer</label>
+            <input id="event-organizer" name="organizer" type="text" maxlength="180" required>
+            <label for="event-discipline">Discipline or focus</label>
+            <input id="event-discipline" name="discipline" type="text" maxlength="100" required>
+            <label for="event-venue">Venue</label>
+            <input id="event-venue" name="venue" type="text" maxlength="180" required>
+            <label for="event-city">City</label>
+            <input id="event-city" name="city" type="text" maxlength="100" required>
+            <label for="event-district">District</label>
+            <input id="event-district" name="district" type="text" maxlength="100" required>
+            <label for="event-state">State or territory</label>
+            <input id="event-state" name="state" type="text" maxlength="100" required>
+            <label for="event-source">Official event source URL (HTTPS)</label>
+            <input id="event-source" name="sourceUrl" type="url" inputmode="url" placeholder="https://…" required>
+            <button class="button button--orange" type="submit">Submit for review <span aria-hidden="true">↗</span></button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+      <section class="services-section">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Questions about your training?</p>
+          <h2>We’re here to<br><em>help you focus.</em></h2>
+          <p>Reach out to discuss the platform, coaching, or membership.</p><a class="button button--orange" href="contact.html">Contact our team <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__main">
+        <div class="footer-brand"><a class="brand brand--footer" href="index.html"><span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="18"></circle>
+                <circle cx="24" cy="24" r="10"></circle>
+                <circle cx="24" cy="24" r="2"></circle>
+                <path d="M24 1v10m0 26v10M1 24h10m26 0h10"></path>
+              </svg></span><span class="brand__text">RangeBook<strong>10.9</strong></span></a>
+          <p>A precision training platform for shooting athletes and coaches.</p>
+        </div>
+        <div class="footer-links">
+          <p class="footer-links__title">Explore</p><a href="platform.html">Platform</a><a href="platform.html#showcase">Screens</a><a href="training.html">Training</a><a href="courses.html">Courses</a><a href="marketplace.html">Marketplace</a>
+        </div>
+        <div class="footer-links">
+          <p class="footer-links__title">Contact</p><a href="contact.html#contact">Submit an enquiry</a><a href="https://wa.me/918010368258" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="contact.html">Contact page</a>
+        </div>
+        <div class="footer-links">
+          <p class="footer-links__title">Information</p><a href="https://shooterspocketdiary.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy policy</a><a href="https://shooterspocketdiary.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & conditions</a><a href="https://shooterspocketdiary.com/refund-policy" target="_blank" rel="noopener noreferrer">Refund policy</a><a href="https://shooterspocketdiary.com/delete-account" target="_blank" rel="noopener noreferrer">Delete account</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom"><span>© <span id="current-year"></span> RangeBook 10.9</span><span>For shooters, by shooters.</span><a href="index.html">Back to home ↑</a></div>
+    </footer>
+  </body>
+</html>

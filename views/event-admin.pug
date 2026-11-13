@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="theme-color" content="#111317")
+    link(rel="icon" type="image/png" sizes="430x430" href="/img/rangebook-mark.png")
+    link(rel="apple-touch-icon" href="/img/rangebook-mark.png")
+    meta(name="robots" content="noindex, nofollow")
+    meta(name="description" content="Review public event submissions for RangeBook 10.9.")
+    title Event Review | RangeBook 10.9
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+    script(defer src="/js/events.js")
+  body
+    main
+      section.page-hero
+        p.eyebrow
+          span.eyebrow__rule
+          |  Private event moderation
+        h1
+          | Admin tools
+          br
+          em submissions.
+        p Sign in with the server-side admin key to review event submissions or download contact enquiries for follow-up.
+      section.event-admin-section
+        form.event-admin__login(data-event-admin)
+          label(for="event-admin-key") Admin API key
+          input#event-admin-key(name="adminKey" type="password" autocomplete="current-password" required)
+          button.button.button--orange(type="submit") Load review queue
+        p.form-status(data-admin-status role="status" aria-live="polite")
+        .event-admin__queue(data-review-queue aria-live="polite")
+      section.event-admin-section
+        h2 Download contact enquiries
+        p Export submitted contact forms as a CSV file that opens in Excel. The export is available after admin-key verification.
+        button.button.button--orange(type="button" data-contact-export disabled) Download enquiries for Excel
+        p.form-status(data-contact-export-status role="status" aria-live="polite")
